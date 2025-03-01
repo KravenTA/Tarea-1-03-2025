@@ -16,7 +16,7 @@ public class Principal {
         lista.insertarCabezaLista(5);
         lista.insertarCabezaLista(6);
         
-        lista.visualizar();        
+        /*lista.visualizar();        
         
         
         System.out.println("\n");
@@ -42,14 +42,20 @@ public class Principal {
         System.out.println("lista " + lista);
         
         lista.visualizar();
-        
+        */
         
         /**
          * Ejercicio 1: Ordernar la lista de forma ascendente
          * Ejercicio 2: Unir dos listas enlazadas
          * Ejercicio 3: Separa numeros pares e impares en dos listas enlazadas diferentes
          */
+        System.out.println("Lista original:");
+        lista.visualizar();
         
+        // Ejercicio 1: Ordenar la lista
+        lista.ordenarLista();
+        System.out.println("\nLista ordenada:");
+        lista.visualizar();
 
     }
 
