@@ -1,5 +1,6 @@
 package umg.edu.progra.listas;
-
+import umg.edu.progra.listas.doblementeEnlazada.Nodo;
+import umg.edu.progra.listas.doblementeEnlazada.DoblementeEnlazada;
 /**
  *
  * @author Walter Cordova
@@ -49,14 +50,39 @@ public class Principal {
          * Ejercicio 2: Unir dos listas enlazadas
          * Ejercicio 3: Separa numeros pares e impares en dos listas enlazadas diferentes
          */
-        System.out.println("Lista original:");
+        /*System.out.println("Lista original:");
         lista.visualizar();
         
         // Ejercicio 1: Ordenar la lista
         lista.ordenarLista();
         System.out.println("\nLista ordenada:");
         lista.visualizar();
+        */
+        
+        
+        
+        DoblementeEnlazada list= new DoblementeEnlazada();
+        
+        list.insertAtBeginning(1);
+        list.insertAtEnd(2);
+        list.insertAtEnd(3);
+        list.displayForward();
+        
+        //contar los nodos
+        System.out.println("Nodos en la lista: " + list.cuentaNodos());
 
+        //Insertar despues de un valor especifico
+        System.out.println("Insertar 4 despues de 3");
+        if(list.insertarDespuesDe(3, 4)) {
+        	list.displayForward();
+        }else {
+        	System.out.println("El valor no se encontro en la lista");
+        }
+        
+        // Revertir la lista
+        System.out.println("\nRevirtiendo la lista...");
+        list.revertir();
+        list.displayForward();
     }
 
 }
